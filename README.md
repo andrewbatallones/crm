@@ -5,6 +5,28 @@ I want to get a finished product up (for people to download and use).
 I'll be documenting as much as I can in terms of what technologies I'll use as well as hopefully
 a better understanding of Java.
 
+**Initial Model Structure**
+- [ ] Teams (an account can manage multiple sales teams)
+- [ ] Employees
+- [ ] Users
+- [ ] Customers
+  - Addresses
+  - Notes
+- [ ] Prospects: Essentially, they'll be customers w/o any orders.
+- [ ] Products
+- [ ] Orders
+  - Order Items
+  - Shipping Address
+  - Billing Address
+  - Notes
+
+**Extra stuff if I can finish the simple stuff**
+
+- [ ] Shopify Integration
+    - [ ] Orders
+    - [ ] Customers
+    - [ ] Products
+
 ## Setup
 
 ### MySQL
@@ -22,22 +44,10 @@ docker run -d \
   mysql:latest
 ```
 
-Required Stuff
-- Teams (an account can manage multiple sales teams)
-- Employees
-  - Manager
-- Users
-  - Owner
-- Customers
-  - Addresses
-  - Notes
-- Products
-- Orders
-  - shipping address
-  - billing address
-  - notes
+## Development
 
-Extra stuff if I can finish the simple stuff
-- Integration with ecommerce sites (Bigcommerce, Shopify)
-  - Basically will be able to sync customers / orders
-  - Maybe products? (but now that is getting to another app - product management, which may be a good second project).
+To run the server, you can run this command or should be able to auto-run it on any code editor.
+
+```bash
+./gradlew bootRun
+```
